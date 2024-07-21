@@ -15,7 +15,6 @@
     "blurhash": "^2.0.5",
     "bootstrap": "^5.3.3",
     "framer-motion": "^11.2.12",
-    "node-sass": "^7.0.3",
     "react": "^18.3.1",
     "react-blurhash": "^0.3.0",
     "react-bootstrap": "^2.10.4",
@@ -25,6 +24,7 @@
     "react-router-dom": "^6.24.0",
     "react-scripts": "5.0.1",
     "react-spinners": "^0.14.1",
+    "sass": "^1.77.8",
     "swiper": "^11.1.4",
     "web-vitals": "^2.1.4"
   },
