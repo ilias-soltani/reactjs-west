@@ -13,6 +13,7 @@ const AppAccordion = ({ children, title, paddingStyle = "1.5rem" }) => {
       onMouseEnter={() => setHovered(true)}
       onMouseLeave={() => setHovered(false)}
       paddingStyle={paddingStyle}
+      className="app-accordion"
     >
       <AccordionSummary
         expandIcon={

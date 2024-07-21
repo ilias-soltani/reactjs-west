@@ -133,11 +133,11 @@ a {
   font-family: "Montserrat", sans-serif;
 }
 
-.css-1getup0-MuiPaper-root-MuiAccordion-root.Mui-expanded::before {
+.app-accordion.Mui-expanded::before {
   opacity: 1 !important;
 }
 
-.css-1getup0-MuiPaper-root-MuiAccordion-root::before {
+.app-accordion::before {
   background-color: var(--light-gray-color) !important;
 }
 
@@ -145,7 +145,7 @@ a {
   margin: 0 !important;
 }
 
-.css-1h9z7r5-MuiButtonBase-root-MuiTab-root.Mui-selected {
+.app-tab.Mui-selected {
   color: var(--text-color) !important;
 }
 

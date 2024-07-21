@@ -3,7 +3,7 @@ import HeroSection from "../components/Home/HeroSection/HeroSection";
 import ProductCarousel from "../components/ProductCarousel/ProductCarousel";
 import CollectionBanner from "../components/CollectionBanner/CollectionBanner";
 import CollectionsCarousel from "../components/CollectionsCarousel/CollectionsCarousel";
-import hotWheelsBanner from "../assets/images/HotWheelsDesktopBanner.webp";
+import { SyncLoader } from "react-spinners";
 import { useGetProductsQuery } from "../app/services/productApi";
 import { useGetCollectionsQuery } from "../app/services/collectionApi";
 
@@ -25,38 +25,51 @@ const HomePage = () => {
   const firstTwoCollections = collections?.data.slice(0, 2);
   const remainingCollections = collections?.data.slice(2);
 
+  const appLoading =
+    isLoading || collectionLoading || polarLoading || polarLoading;
+
   return (
     <div>
       <HeroSection />
-      <div className="app-container">
-        <ProductCarousel
-          swiperId={"swiper1"}
-          products={saleProducts?.data}
-          isLoading={isLoading}
-        />
-      </div>
-      {firstTwoCollections?.map((collection, i) => (
-        <div key={collection._id}>
-          <CollectionBanner collection={collection} />
+      {appLoading ? (
+        <div className="flex-center" style={{ minHeight: "100vh" }}>
+          <SyncLoader size={15} speedMultiplier={0.9} color="#808080" />
+        </div>
+      ) : (
+        <>
           <div className="app-container">
             <ProductCarousel
-              swiperId={`swiper${i + 2}`}
-              products={i === 0 ? polarProducts?.data : classicProducts?.data}
-              isLoading={i === 0 ? polarLoading : classicLoading}
+              swiperId={"swiper1"}
+              products={saleProducts?.data}
+              isLoading={isLoading}
             />
           </div>
-        </div>
-      ))}
-      {!collectionLoading && (
-        <CollectionsCarousel data={remainingCollections} />
+          {firstTwoCollections?.map((collection, i) => (
+            <div key={collection._id}>
+              <CollectionBanner collection={collection} />
+              <div className="app-container">
+                <ProductCarousel
+                  swiperId={`swiper${i + 2}`}
+                  products={
+                    i === 0 ? polarProducts?.data : classicProducts?.data
+                  }
+                  isLoading={i === 0 ? polarLoading : classicLoading}
+                />
+              </div>
+            </div>
+          ))}
+          {!collectionLoading && (
+            <CollectionsCarousel data={remainingCollections} />
+          )}
+          <div className="app-container">
+            <ProductCarousel
+              swiperId={"swiper4"}
+              products={saleProducts?.data}
+              isLoading={isLoading}
+            />
+          </div>
+        </>
       )}
-      <div className="app-container">
-        <ProductCarousel
-          swiperId={"swiper4"}
-          products={saleProducts?.data}
-          isLoading={isLoading}
-        />
-      </div>
     </div>
   );
 };

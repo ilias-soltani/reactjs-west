@@ -21,6 +21,8 @@ const ProductCard = ({ product }) => {
   const navigate = useNavigate();
   const dispatch = useDispatch();
 
+  const isMobile = window.innerWidth <= 767;
+
   const handelClick = async (e) => {
     e.stopPropagation();
     if (token) {
@@ -50,10 +52,10 @@ const ProductCard = ({ product }) => {
     <div style={{ position: "relative" }}>
       <div
         className={`product-card ${
-          hoverd && product.colors.hoverImage ? "hoverd" : ""
+          hoverd && product.colors.hoverImage && !isMobile ? "hoverd" : ""
         }`}
-        onMouseEnter={() => setHoverd(true)}
-        onMouseLeave={() => setHoverd(false)}
+        onMouseEnter={() => !isMobile && setHoverd(true)}
+        onMouseLeave={() => !isMobile && setHoverd(false)}
         onClick={() =>
           navigate(`/product/${product._id}/color/${product.colors._id}`)
         }
