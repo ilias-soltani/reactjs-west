@@ -49,7 +49,7 @@ const NavBar = () => {
   };
 
   const handelCartClick = () => {
-    if (!token) navigate("/login");
+    if (!token) return navigate("/login");
 
     if (location.pathname !== "/cart") {
       document.body.classList.add("modal-open");

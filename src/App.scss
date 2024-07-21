@@ -418,3 +418,7 @@ input {
   gap: 1.5rem;
   align-items: center;
 }
+
+.MuiAlert-message {
+  overflow: hidden !important;
+}
