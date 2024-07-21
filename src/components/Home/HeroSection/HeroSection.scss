@@ -21,6 +21,7 @@
     object-fit: cover;
     object-position: center;
     z-index: -1;
+    pointer-events: none;
   }
 
   video.hidden {

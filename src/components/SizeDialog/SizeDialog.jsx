@@ -66,6 +66,14 @@ const SizeDialog = ({ open, setOpen, product }) => {
           margin: "1rem",
           maxWidth: "none",
           minWidth: "530px",
+          width: "auto",
+        },
+        sx: {
+          "@media (max-width: 767px)": {
+            width: "calc(100% - 2rem) !important",
+            margin: "1rem !important",
+            minWidth: "0 !important",
+          },
         },
       }}
     >

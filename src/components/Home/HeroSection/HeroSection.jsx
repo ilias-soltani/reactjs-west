@@ -35,7 +35,8 @@ const HeroSection = () => {
         autoPlay
         muted
         loop
-        className={videoLoaded ? "loaded" : "hidden"}
+        playsInline
+        className={`video-bg ${videoLoaded ? "loaded" : "hidden"}`}
       ></video>
 
       {!videoLoaded && (
