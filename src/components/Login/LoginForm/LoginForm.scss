@@ -1,0 +1,65 @@
+.login-form {
+  background-color: white;
+  .login-container {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
+    gap: 2rem;
+    flex-wrap: wrap;
+
+    .text {
+      h1 {
+        font-family: "Montserrat", sans-serif;
+        text-transform: uppercase;
+        font-weight: bolder;
+        margin-bottom: 1rem;
+      }
+
+      > span {
+        display: block;
+        a {
+          color: var(--dark-color);
+          text-decoration: underline;
+          font-weight: bolder;
+        }
+        margin-bottom: 2rem;
+      }
+    }
+
+    .form-login {
+      min-width: 600px;
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+      border-radius: 8px;
+
+      @media (max-width: 992px) {
+        width: 100%;
+        min-width: initial;
+      }
+
+      input {
+        font-size: 1rem;
+      }
+
+      .btn-login {
+        width: 100%;
+        padding: 13px 20px;
+        margin-top: 1rem;
+
+        @media (max-width: 767px) {
+          padding: 10px 16px;
+        }
+      }
+
+      a.forgot-pass {
+        color: var(--dark-color);
+        text-decoration: underline;
+        font-weight: bolder;
+        font-size: 13px;
+        text-align: start;
+      }
+    }
+  }
+}

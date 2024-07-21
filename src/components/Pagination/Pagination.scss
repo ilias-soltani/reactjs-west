@@ -1,0 +1,70 @@
+.app-pagination {
+  width: fit-content;
+  display: flex;
+  align-items: center;
+  border: 1px solid var(--light-gray-color);
+  border-radius: 2rem;
+  color: var(--text-color);
+  user-select: none;
+
+  .icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 20px;
+    cursor: pointer;
+    height: 100%;
+    transition: 0.3s transform;
+    position: relative;
+
+    &:not(.disabled) {
+      &::before {
+        content: "";
+        position: absolute;
+        height: 2px;
+        width: 20%;
+        background-color: var(--text-color);
+        transition: 0.2s opacity, 0.3s transform;
+        top: 50%;
+        opacity: 0;
+      }
+
+      &.arrow-next {
+        &::before {
+          transform: translateX(-2px) translateY(-50%);
+        }
+        &:hover {
+          transform: translateX(2px);
+
+          &::before {
+            opacity: 1;
+            transform: translateX(-4px) translateY(-50%);
+          }
+        }
+      }
+
+      &.arrow-back {
+        &::before {
+          transform: translateX(2px) translateY(-50%);
+        }
+        &:hover {
+          transform: translateX(-2px);
+
+          &::before {
+            opacity: 1;
+            transform: translateX(4px) translateY(-50%);
+          }
+        }
+      }
+    }
+  }
+
+  .icon.disabled {
+    cursor: initial;
+    opacity: 0.5;
+  }
+
+  .pagination-page {
+    padding: 12px 8px;
+  }
+}

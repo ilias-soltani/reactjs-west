@@ -1,0 +1,38 @@
+.dialog-title {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+
+  .icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+  }
+}
+
+.dialog-p {
+  font-size: 13px;
+  margin-bottom: 1rem;
+}
+
+.btns-cont {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.radio-address {
+  display: flex;
+  flex-direction: column;
+
+  .address-details {
+    font-size: 11px;
+    color: #545353b3;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+}

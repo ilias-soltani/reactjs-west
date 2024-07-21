@@ -1,0 +1,58 @@
+.ticker {
+  position: relative;
+  display: flex;
+  width: 100%;
+  overflow: hidden;
+  background-color: black;
+  padding: 4px 0;
+
+  .ticker-container {
+    white-space: nowrap;
+    animation: marque 120s linear infinite;
+    animation-delay: calc(120s / -1);
+
+    &:nth-child(2) {
+      animation: marque2 120s linear infinite;
+      animation-delay: calc(120s / -2);
+    }
+
+    div {
+      display: flex;
+      align-items: center;
+    }
+
+    span {
+      display: inline-block;
+      margin: 0 2.5rem;
+      color: white;
+      text-transform: uppercase;
+      font-size: 10px;
+      font-weight: 700;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      svg {
+        font-size: 14px;
+      }
+    }
+  }
+}
+
+@keyframes marque {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+@keyframes marque2 {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-200%);
+  }
+}

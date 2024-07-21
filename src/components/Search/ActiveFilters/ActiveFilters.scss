@@ -1,0 +1,24 @@
+.active-filters {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+
+  .active-filters-item {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 12px 20px;
+    border-radius: 2rem;
+    background-color: var(--light-gray-color);
+    text-transform: capitalize;
+    font-size: 13px;
+    color: var(--text-color);
+
+    svg {
+      color: black;
+      font-size: 1rem;
+      cursor: pointer;
+    }
+  }
+}

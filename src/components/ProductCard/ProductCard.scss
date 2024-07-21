@@ -1,0 +1,142 @@
+.product-card {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  overflow: hidden;
+
+  &:hover {
+    .product-card-image {
+      .quick-add-btn {
+        opacity: 1;
+        bottom: 1rem;
+      }
+    }
+  }
+
+  &.hoverd {
+    .cover-image {
+      opacity: 0;
+    }
+
+    .hover-image {
+      animation: flash 0.2s;
+    }
+  }
+
+  .product-card-image img {
+    width: 100%;
+    height: auto;
+  }
+
+  .product-card-image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+
+    .cover-image {
+      transition: 0.2s opacity;
+    }
+
+    .hover-image {
+      position: absolute;
+      inset: 0;
+      z-index: -1;
+      @keyframes flash {
+        0% {
+          opacity: 0;
+        }
+        100% {
+          opacity: 1;
+        }
+      }
+    }
+
+    .product-card-discount {
+      position: absolute;
+      top: 1rem;
+      left: 1rem;
+      width: 63px;
+      height: 21px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 11px;
+      background-color: var(--red-color);
+      color: white;
+      border-radius: 2rem;
+      font-weight: bold;
+      z-index: 5;
+    }
+
+    .quick-add-btn {
+      position: absolute;
+      right: 1rem;
+      bottom: 0;
+      background-color: #eaeaea;
+      padding: 12px 24px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 3px;
+      border-radius: 2rem;
+      font-size: 12px;
+      color: var(--dark-color);
+      font-weight: bold;
+      cursor: pointer;
+      opacity: 0;
+      transition: 0.3s opacity, 0.3s bottom;
+
+      &:hover {
+        opacity: 0.8;
+      }
+
+      svg {
+        font-size: 8px;
+      }
+    }
+  }
+
+  .product-card-text-info {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+
+    .product-card-title {
+      color: var(--text-color);
+      font-weight: bold;
+      text-transform: uppercase;
+      font-size: 13px;
+    }
+
+    .product-card-color {
+      color: var(--text-color);
+      text-transform: capitalize;
+      font-size: 13px;
+    }
+
+    .product-card-price {
+      font-size: 13px;
+      color: #545353b3;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+
+      .through {
+        text-decoration: line-through;
+      }
+
+      .product-card-discount-price {
+        color: var(--red-color);
+      }
+    }
+  }
+}

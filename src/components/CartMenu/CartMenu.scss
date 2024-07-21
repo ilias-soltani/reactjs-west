@@ -1,0 +1,232 @@
+.cart-menu {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.cart-page-not-found-small {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+
+  > div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    .icon {
+      svg {
+        color: var(--text-color);
+        font-size: 2rem;
+        margin-bottom: 1.5rem;
+      }
+    }
+
+    h2 {
+      font-size: 20px;
+      color: var(--text-color);
+      font-family: "Montserrat", sans-serif;
+      margin-bottom: 1.5rem;
+    }
+
+    .not-found-btn {
+      background-color: var(--light-gray-color);
+      padding: 10px 20px;
+      color: black;
+
+      &:hover {
+        background-color: var(--light-gray-color);
+      }
+    }
+  }
+}
+
+.cart-menu-container {
+  padding: 2rem;
+  height: 100%;
+
+  @media (max-width: 767px) {
+    padding: 1.5rem;
+  }
+}
+
+.cart-menu-items {
+  flex-basis: 55%;
+  overflow-y: auto;
+  .header {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    justify-content: space-between;
+    margin-bottom: 1.5rem;
+
+    h6 {
+      margin-bottom: 0;
+      font-size: 20px;
+      color: var(--text-color);
+      font-weight: 500;
+      font-family: "Montserrat", sans-serif;
+    }
+
+    .icon {
+      cursor: pointer;
+      svg {
+        font-size: 1.5rem;
+      }
+    }
+  }
+
+  .cart-items-products {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+
+    .cart-items-menu-item {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      justify-content: space-between;
+
+      .actions {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 0.5rem;
+
+        .cart-quantity-selecte {
+          user-select: none;
+          display: flex;
+          align-items: center;
+          gap: 5px;
+          border-radius: 0.5rem;
+          border: 1px solid #eaeaea;
+          width: fit-content;
+
+          span {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 40px;
+            color: var(--text-color);
+            font-size: 0.6785rem;
+
+            svg {
+              font-size: 12px;
+            }
+
+            &:not(:nth-child(2)) {
+              padding: 0 15px;
+              cursor: pointer;
+            }
+          }
+        }
+
+        .remove-item {
+          font-size: 11px;
+          color: #545353b3;
+          cursor: pointer;
+          width: fit-content;
+          position: relative;
+          transition: 0.3s color;
+
+          &::before {
+            content: "";
+            position: absolute;
+            width: 100%;
+            height: 1px;
+            left: 0;
+            background-color: #545353b3;
+            top: 80%;
+            transition: 0.3s width, 0.3s background-color;
+          }
+
+          &:hover {
+            color: var(--text-color);
+
+            &::before {
+              width: 0;
+              background-color: var(--text-color);
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.cart-menu-info {
+  flex-grow: 1;
+  border-top: 1px solid var(--light-gray-color);
+
+  .subtotal-header,
+  .total-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    margin-bottom: 5px;
+  }
+
+  .subtotal-header {
+    font-size: 20px;
+    font-family: "Montserrat", sans-serif;
+    color: var(--text-color);
+
+    .subtotal.discount {
+      display: flex;
+      align-items: center;
+      gap: 5px;
+
+      .main {
+        text-decoration: line-through;
+        font-size: 13px;
+        color: #545353b3;
+      }
+
+      > .sec {
+        color: #22bb33;
+      }
+    }
+  }
+
+  .header-p {
+    color: #545353b3;
+    font-size: 11px;
+    padding: 0;
+    margin-bottom: 20px;
+
+    @media (max-width: 767px) {
+      margin-bottom: 1rem;
+    }
+  }
+
+  .p-red {
+    color: red;
+    font-weight: bold;
+    font-size: 13px;
+    margin-bottom: 20px;
+
+    @media (max-width: 767px) {
+      font-size: 12px;
+      margin-bottom: 1rem;
+    }
+  }
+
+  .p-text {
+    font-size: 13px;
+    color: #545353b3;
+    @media (max-width: 767px) {
+      font-size: 12px;
+      margin-bottom: 1rem;
+    }
+  }
+
+  .view-btn {
+    margin-bottom: auto;
+    width: 100%;
+    padding: 12px 20px;
+  }
+}

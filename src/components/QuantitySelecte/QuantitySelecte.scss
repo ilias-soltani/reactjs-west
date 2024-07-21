@@ -1,0 +1,22 @@
+.quantity-selecte {
+  user-select: none;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  border-radius: 3.75rem;
+  border: 1px solid #eaeaea;
+  width: fit-content;
+
+  span {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 48px;
+    color: var(--text-color);
+
+    &:not(:nth-child(2)) {
+      padding: 0 24px;
+      cursor: pointer;
+    }
+  }
+}

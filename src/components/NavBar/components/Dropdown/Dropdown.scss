@@ -1,0 +1,53 @@
+.dropdown-container {
+  position: relative;
+
+  .app-dropdown-menu {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    background-color: var(--dark-color);
+    top: calc(100% + 34.9px);
+    padding: 1.25rem 1.75rem;
+    max-width: 350px;
+    min-width: 150px;
+    gap: 1rem;
+
+    .bridge {
+      position: absolute;
+      background-color: transparent;
+      top: -2.2rem;
+      height: 2.2rem;
+      width: 100%;
+      left: 0;
+    }
+
+    a {
+      position: relative;
+      font-size: 12px;
+      text-transform: capitalize;
+      opacity: 0.7;
+      width: fit-content;
+      white-space: nowrap;
+      transition: 0.3s opacity;
+
+      &::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 85%;
+        width: 0;
+        height: 1px;
+        background-color: white;
+        transition: 0.4s width;
+      }
+
+      &:hover {
+        opacity: 1 !important;
+
+        &::before {
+          width: 100%;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,38 @@
+.addresses-list {
+  display: flex;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+
+  .address-item {
+    flex-grow: 1;
+    padding: 2rem;
+    border: 1px solid var(--light-gray-color);
+    font-size: 13px;
+    min-width: 250px;
+
+    h6 {
+      color: var(--text-color);
+      font-size: 13px;
+      margin-bottom: 1rem;
+      font-weight: bolder;
+    }
+
+    .code,
+    .phone {
+      display: block;
+    }
+
+    .actions {
+      margin-top: 1rem;
+      display: flex;
+      align-items: center;
+      gap: 1.5rem;
+
+      > span {
+        cursor: pointer;
+        text-decoration: underline;
+        font-weight: bold;
+      }
+    }
+  }
+}

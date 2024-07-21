@@ -1,0 +1,165 @@
+.nav-costume {
+  position: absolute;
+  top: 22px;
+  transition: 0.3s background-color, 0.3s transform;
+  background-color: transparent;
+}
+
+.nav-default {
+  position: fixed;
+  top: 22px;
+  background-color: var(--dark-color);
+}
+
+.app-navbar {
+  width: 100%;
+  transition: 0.3s background-color, 0.3s transform;
+  z-index: 999;
+
+  &.dropdown-hovered {
+    background-color: var(--dark-color);
+  }
+
+  &.hide {
+    transform: translateY(-100%) !important;
+  }
+
+  &.default {
+    position: fixed;
+    background-color: var(--dark-color);
+  }
+
+  &.active {
+    position: fixed;
+    background-color: var(--dark-color);
+    top: 0px;
+    animation: slide-down 0.3s;
+  }
+
+  .app-container {
+    display: grid;
+    grid-template: "main-nav logo secondary-nav" / minmax(0, 1fr) auto minmax(
+        0,
+        1fr
+      );
+    align-items: center;
+    gap: 1.5rem;
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+
+    @media (max-width: 767px) {
+      padding-top: 12px;
+      padding-bottom: 12px;
+    }
+  }
+
+  ul {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    text-transform: uppercase;
+
+    li {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      cursor: pointer;
+
+      svg {
+        font-size: 20px;
+        color: white;
+        transition: 0.3s opacity;
+
+        &:hover {
+          opacity: 0.7;
+        }
+      }
+    }
+
+    a {
+      font-weight: 700;
+      color: white;
+      font-size: 12px;
+      transition: 0.3s opacity;
+
+      &.red {
+        color: red;
+      }
+
+      &:hover {
+        opacity: 0.7;
+      }
+
+      svg {
+        font-size: 20px;
+        transition: 0.3s opacity;
+      }
+    }
+  }
+
+  .hamburger {
+    display: none;
+    cursor: pointer;
+
+    svg {
+      font-size: 20px;
+      color: white;
+      transition: 0.3s opacity;
+
+      &:hover {
+        opacity: 0.7;
+      }
+    }
+
+    @media (max-width: 992px) {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      justify-content: start;
+    }
+  }
+
+  .main-nav {
+    justify-content: start;
+
+    @media (max-width: 992px) {
+      display: none;
+    }
+  }
+
+  .secondary-nav {
+    display: flex;
+    gap: 1.5rem;
+    justify-content: end;
+    @media (max-width: 992px) {
+      > ul:nth-child(1) {
+        display: none;
+      }
+    }
+
+    @media (max-width: 767px) {
+      > ul:nth-child(2) {
+        gap: 1rem;
+      }
+    }
+  }
+
+  .logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    img {
+      max-width: 100px;
+    }
+  }
+}
+
+@keyframes slide-down {
+  from {
+    top: -100%;
+  }
+  to {
+    top: 0;
+  }
+}

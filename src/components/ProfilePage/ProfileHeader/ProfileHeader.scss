@@ -1,0 +1,38 @@
+.profile-header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--light-gray-color);
+  position: relative;
+
+  .app-tab {
+    text-transform: capitalize;
+    padding: 1rem;
+    font-size: 13px;
+    color: #545353b3;
+    font-weight: 700;
+  }
+
+  .logout {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 48px;
+    color: #545353b3;
+    font-size: 13px;
+    cursor: pointer;
+    transition: 0.3s color;
+
+    &:hover {
+      color: var(--text-color);
+    }
+
+    @media (max-width: 992px) {
+      right: 32px;
+    }
+
+    @media (max-width: 767px) {
+      right: 1rem;
+    }
+  }
+}

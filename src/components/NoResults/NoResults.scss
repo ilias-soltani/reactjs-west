@@ -1,0 +1,20 @@
+.no-results {
+  min-height: 70vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .app-container {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    color: var(--text-color);
+    font-weight: bold;
+    align-items: center;
+
+    svg {
+      color: var(--light-gray-color);
+      font-size: 9rem;
+    }
+  }
+}

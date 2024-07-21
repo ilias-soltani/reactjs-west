@@ -1,0 +1,129 @@
+.cart-items {
+  flex-grow: 1;
+  overflow-x: auto;
+
+  .cart-items-table {
+    width: 100%;
+    min-width: 450px;
+
+    tr:first-child {
+      border-bottom: 1px solid var(--light-gray-color);
+    }
+
+    th {
+      font-size: 13px;
+      color: var(--text-color);
+
+      &:not(:last-child) {
+        padding: 24px 16px;
+      }
+
+      &:nth-child(2) {
+        text-align: center;
+      }
+
+      &:last-child {
+        padding: 24px 0px 24px 16px;
+        text-align: end;
+      }
+    }
+
+    tr:nth-child(2) {
+      td:first-child {
+        padding: 32px 16px 24px 0;
+      }
+      td:nth-child(2) {
+        padding: 32px 16px 24px 16px;
+      }
+      td:last-child {
+        padding: 32px 0 24px 16px;
+      }
+    }
+
+    tr:not(:nth-child(2)) {
+      td:first-child {
+        padding: 0 16px 24px 0;
+      }
+
+      td:nth-child(2) {
+        padding: 0 16px 24px 16px;
+      }
+
+      td:last-child {
+        padding: 0 0 24px 16px;
+      }
+    }
+
+    .second-td {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 0.5rem;
+
+      .remove-item {
+        font-size: 11px;
+        color: #545353b3;
+        cursor: pointer;
+        width: fit-content;
+        position: relative;
+        transition: 0.3s color;
+
+        &::before {
+          content: "";
+          position: absolute;
+          width: 100%;
+          height: 1px;
+          left: 0;
+          background-color: #545353b3;
+          top: 80%;
+          transition: 0.3s width, 0.3s background-color;
+        }
+
+        &:hover {
+          color: var(--text-color);
+
+          &::before {
+            width: 0;
+            background-color: var(--text-color);
+          }
+        }
+      }
+    }
+
+    .cart-quantity-selecte {
+      user-select: none;
+      display: flex;
+      align-items: center;
+      gap: 5px;
+      border-radius: 0.5rem;
+      border: 1px solid #eaeaea;
+      width: fit-content;
+
+      span {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 48px;
+        color: var(--text-color);
+        font-size: 0.6785rem;
+
+        svg {
+          font-size: 12px;
+        }
+
+        &:not(:nth-child(2)) {
+          padding: 0 15px;
+          cursor: pointer;
+        }
+      }
+    }
+
+    td.item-total {
+      font-size: 13px;
+      color: #545353b3;
+      text-align: end;
+      padding-left: 0;
+    }
+  }
+}

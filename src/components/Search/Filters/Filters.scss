@@ -1,0 +1,145 @@
+.serach-filters {
+  min-width: 300px;
+  height: fit-content;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+
+  @media (max-width: 992px) {
+    display: none;
+  }
+
+  .accordions-list {
+    border-top: 1px solid var(--light-gray-color);
+    border-bottom: 1px solid var(--light-gray-color);
+
+    .serach-filters-accordion {
+      &:not(:last-child) {
+        border-bottom: 1px solid var(--light-gray-color);
+      }
+
+      .MuiFormControlLabel-label {
+        font-size: 13px !important;
+        color: var(--text-color) !important;
+        text-transform: capitalize !important;
+        opacity: 0.7 !important;
+        transition: 0.3s opacity !important;
+      }
+
+      .Mui-checked {
+        + .MuiFormControlLabel-label {
+          opacity: 1 !important;
+        }
+      }
+    }
+  }
+}
+
+.serach-sort-filters {
+  .show-btn {
+    position: fixed;
+    bottom: 2rem;
+    left: 50%;
+    transform: translateX(-50%) translateY(0);
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
+    z-index: 900;
+    padding: 17.2px 40px;
+    background-color: var(--text-color);
+    color: white;
+    font-weight: bolder;
+    font-size: 13px;
+    border-radius: 2rem;
+    opacity: 1;
+    transition: 0.3s opacity, 0.3s transform, 0.3s background-color;
+    cursor: pointer;
+
+    &.hidden {
+      opacity: 0;
+      transform: translateX(-50%) translateY(25px);
+    }
+
+    &:hover {
+      background-color: #6c6c6c;
+    }
+
+    svg {
+      font-size: 20px;
+    }
+  }
+
+  .hidden-filters {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    flex-grow: 1;
+
+    .header {
+      padding: 24px 40px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1.5rem;
+      flex-wrap: wrap;
+      font-size: 20px;
+      color: var(--text-color);
+      font-family: "Montserrat", sans-serif;
+      font-weight: 500;
+      border-bottom: 1px solid var(--light-gray-color);
+
+      svg {
+        font-size: 1.5rem;
+        cursor: pointer;
+      }
+    }
+
+    .lists {
+      padding: 24px 40px calc(54px + 32px);
+      overflow-y: auto;
+
+      .serach-filters-accordion {
+        &:not(:last-child) {
+          border-bottom: 1px solid var(--light-gray-color);
+        }
+
+        .MuiFormControlLabel-label {
+          font-size: 13px !important;
+          color: var(--text-color) !important;
+          text-transform: capitalize !important;
+          opacity: 0.7 !important;
+          transition: 0.3s opacity !important;
+        }
+
+        .Mui-checked {
+          + .MuiFormControlLabel-label {
+            opacity: 1 !important;
+          }
+        }
+      }
+    }
+
+    .apply-btn {
+      position: absolute;
+      bottom: 24px;
+      z-index: 5;
+      width: calc(100% - 80px);
+      left: 50%;
+      transform: translateX(-50%);
+      background-color: var(--light-gray-color);
+      padding: 17.2px 40px;
+      text-align: center;
+      border-radius: 2rem;
+      font-size: 13px;
+      font-weight: bolder;
+      color: var(--dark-color);
+      transition: 0.3s background-color;
+      cursor: pointer;
+
+      &:hover {
+        background-color: #cbcbcb;
+      }
+    }
+  }
+}

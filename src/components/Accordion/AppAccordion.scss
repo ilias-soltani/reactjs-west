@@ -1,0 +1,29 @@
+.icon-accordion {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 24px;
+  height: 24px;
+  background-color: var(--light-gray-color);
+  border-radius: 50%;
+  transition: 0.3s background-color;
+
+  svg {
+    color: var(--text-color);
+    transition: 0.3s color;
+  }
+
+  &.hoverd {
+    background-color: var(--text-color);
+
+    svg {
+      color: white;
+    }
+  }
+}
+
+.accordion-title {
+  color: var(--text-color);
+  font-weight: 700;
+  font-size: 13px;
+}

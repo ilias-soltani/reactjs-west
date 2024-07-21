@@ -1,0 +1,31 @@
+.main-btn {
+  overflow: hidden;
+  .text {
+    display: block;
+    transition: 0.2s transform, 0.2s opacity;
+  }
+
+  .loading-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, 200%);
+    transition: 0.2s transform, 0.2s opacity;
+    opacity: 0;
+  }
+}
+
+.main-btn.loading {
+  .text {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+
+  .loading-icon {
+    opacity: 1;
+    transform: translate(-50%, -50%);
+  }
+}

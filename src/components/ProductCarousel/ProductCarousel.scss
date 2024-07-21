@@ -1,0 +1,63 @@
+.swiper-container {
+  padding-top: 64px;
+  padding-bottom: 64px;
+  position: relative;
+  overflow: hidden;
+}
+
+.swiper-container-loading {
+  height: 400px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.prev,
+.next {
+  user-select: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  z-index: 2;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 3.5rem;
+  height: 3.5rem;
+  background-color: white;
+  border-radius: 50%;
+  cursor: pointer;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  transition: 0.2s opacity, 0.2s transform;
+  transform: scale(0);
+  opacity: 0;
+
+  @media (max-width: 767px) {
+    display: none !important;
+  }
+
+  &.show {
+    opacity: 1;
+    transform: scale(1);
+  }
+
+  &:hover {
+    svg {
+      color: black;
+    }
+  }
+
+  svg {
+    color: #8c8b8c;
+    font-size: 20px;
+    transition: 0.3s;
+  }
+}
+
+.prev {
+  left: 5rem;
+}
+
+.next {
+  right: 5rem;
+}
