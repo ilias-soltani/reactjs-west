@@ -266,6 +266,7 @@ a {
     &::before,
     &::after {
       opacity: 1;
+      z-index: initial;
     }
   }
 
@@ -281,6 +282,7 @@ a {
     border-radius: 5px;
     font-size: 10px;
     opacity: 0;
+    z-index: -5;
     transition: 0.2s opacity;
   }
 
