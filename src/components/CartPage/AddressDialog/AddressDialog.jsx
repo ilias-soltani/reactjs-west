@@ -35,15 +35,16 @@ const AddressDialog = ({ setOpen, open }) => {
   const { data, isLoading, isFetching } = useGetAllUserAddressesQuery();
 
   const checkout = async () => {
-    await checkoutSession({
-      shippingAddress: {
-        alias: selectedAddress.alias,
-        phone: selectedAddress.phone,
-        country: selectedAddress.country,
-        city: selectedAddress.city,
-        postalCode: selectedAddress.postalCode,
-      },
-    });
+    if (selectedAddress)
+      await checkoutSession({
+        shippingAddress: {
+          alias: selectedAddress.alias,
+          phone: selectedAddress.phone,
+          country: selectedAddress.country,
+          city: selectedAddress.city,
+          postalCode: selectedAddress.postalCode,
+        },
+      });
   };
 
   const handleClose = () => {
