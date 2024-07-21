@@ -81,7 +81,7 @@ const LoginForm = () => {
             </AlertTitle>
             <span style={{ display: "flex", gap: "5px", alignItems: "center" }}>
               Email:
-              <span style={{ fontWeight: "bold" }}> xm7z1234@gmail.com</span>
+              <span style={{ fontWeight: "bold" }}> user@west.com</span>
               <CopyText text={"xm7z1234@gmail.com"} />
             </span>
             <span
