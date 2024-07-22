@@ -425,3 +425,32 @@ input {
   overflow: hidden !important;
   width: 100% !important;
 }
+
+.not-found-page {
+  min-height: 60vh;
+  position: relative;
+
+  .h1-404 {
+    position: absolute;
+    font-family: "Montserrat", sans-serif;
+    font-weight: bolder;
+    font-size: 400px;
+    color: var(--light-gray-color);
+    z-index: -1;
+    margin: 0;
+
+    @media (max-width: 992px) {
+      font-size: 300px;
+    }
+
+    @media (max-width: 767px) {
+      font-size: 150px;
+    }
+  }
+
+  .title {
+    color: var(--text-color);
+    margin: 0;
+    font-family: "Montserrat", sans-serif;
+  }
+}

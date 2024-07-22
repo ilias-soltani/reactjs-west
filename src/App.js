@@ -17,6 +17,7 @@ import VerifyEmail from "./pages/VerifyEmail";
 import VerifyCodePage from "./pages/VerifyCodePage";
 import ForgotPasswordPage from "./pages/ForgotPasswordPage";
 import ResetPasswordPage from "./pages/ResetPasswordPage";
+import NotFoundPage from "./pages/NotFoundPage";
 
 import ScrollToTop from "./utils/ScrollToTop ";
 
@@ -92,6 +93,8 @@ function App() {
               element={<AddAddressPage />}
             />
           </Route>
+
+          <Route path="*" element={<NotFoundPage />} />
         </Routes>
         <Footer />
       </BrowserRouter>

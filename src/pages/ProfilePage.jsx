@@ -3,6 +3,7 @@ import { Routes, Route } from "react-router-dom";
 import ProfileHeader from "../components/ProfilePage/ProfileHeader/ProfileHeader";
 import AddressPage from "./AddressPage";
 import OrdersPage from "./OrdersPage";
+import NotFoundPage from "./NotFoundPage";
 
 const ProfilePage = () => {
   return (
@@ -12,6 +13,7 @@ const ProfilePage = () => {
         <Routes>
           <Route path="/" element={<OrdersPage />} />
           <Route path="address" element={<AddressPage />} />
+          <Route path="*" element={<NotFoundPage />} />
         </Routes>
       </div>
     </div>
