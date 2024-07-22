@@ -49,7 +49,12 @@ const NavBarMenu = ({
               className="main-list"
             >
               <li>
-                <Link to="/new?sort=Date:%20new%20to%20old">New</Link>
+                <Link
+                  to="/new?sort=Date:%20new%20to%20old"
+                  onClick={handleExit}
+                >
+                  New
+                </Link>
               </li>
               {[, "Collections", "Clothing", "Accessories"].map(
                 (item, index) => (
@@ -62,7 +67,7 @@ const NavBarMenu = ({
                 )
               )}
               <li>
-                <Link to="/sale" className="red">
+                <Link to="/sale" onClick={handleExit} className="red">
                   Summer Sale
                 </Link>
               </li>
