@@ -80,11 +80,11 @@ const CartInfo = ({ data }) => {
     }
   };
 
-  useEffect(() => {
-    if (appIsError) {
-      console.log(appError);
-    }
-  }, [appIsError, appError]);
+  // useEffect(() => {
+  //   if (appIsError) {
+  //     console.log(appError);
+  //   }
+  // }, [appIsError, appError]);
 
   useEffect(() => {
     setCouponMassege(

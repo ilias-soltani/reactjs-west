@@ -59,9 +59,9 @@ const CartItems = ({ data }) => {
     }
   };
 
-  useEffect(() => {
-    if (appIsError) console.log(appError);
-  }, [appIsError, appError]);
+  // useEffect(() => {
+  //   if (appIsError) console.log(appError);
+  // }, [appIsError, appError]);
 
   return (
     <div className="cart-items" style={{ opacity: appIsLoading ? "0.5" : "1" }}>

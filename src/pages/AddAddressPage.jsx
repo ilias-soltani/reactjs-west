@@ -37,7 +37,6 @@ const AddAddressPage = () => {
     });
 
     // Check the previous path and navigate accordingly
-    console.log(location.state?.from);
     if (location.state?.from === "/cart") {
       navigate("/cart");
     } else {
@@ -63,9 +62,9 @@ const AddAddressPage = () => {
     fetchCountries();
   }, []);
 
-  useEffect(() => {
-    if (isError) console.log(error);
-  }, [isError, error]);
+  // useEffect(() => {
+  //   if (isError) console.log(error);
+  // }, [isError, error]);
 
   return (
     <div className="app-section">

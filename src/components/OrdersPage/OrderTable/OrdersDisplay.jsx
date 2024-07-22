@@ -87,7 +87,6 @@ const OrdersDisplay = ({ data }) => {
               <div className="delivery-info">
                 {(() => {
                   const activeStep = findLastTrueIndex(item.isDelivered);
-                  console.log(activeStep);
                   return (
                     <Stepper activeStep={activeStep} orientation="vertical">
                       {steps.map((step, index) => (

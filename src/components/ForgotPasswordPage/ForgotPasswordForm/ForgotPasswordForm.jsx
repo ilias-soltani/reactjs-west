@@ -33,7 +33,7 @@ const ForgotPasswordForm = () => {
       navigate("/verify-code");
     }
     if (isError) {
-      console.log(error);
+      // console.log(error);
       setInputErr({
         isError: true,
         helper:

@@ -11,10 +11,10 @@ const CartPage = () => {
 
   const { data, isLoading, isFetching, isError, error } = useGetUserCartQuery();
 
-  useEffect(() => {
-    console.log(data);
-    console.log("error", error);
-  }, [isError, error, data]);
+  // useEffect(() => {
+  //   console.log(data);
+  //   console.log("error", error);
+  // }, [isError, error, data]);
 
   if (isLoading) {
     document.documentElement.scrollTo({

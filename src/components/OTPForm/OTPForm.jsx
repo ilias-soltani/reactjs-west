@@ -83,7 +83,7 @@ const OTPForm = ({ storage }) => {
       navigate("/reset-password", { replace: true });
     }
     if (passwordIsError) {
-      console.log(passwordError);
+      // console.log(passwordError);
       setInputErr({ isError: true, helper: "Code invalid or expired" });
     }
   }, [passwordIsSuccess, passwordIsError, passwordError, passwordData]);

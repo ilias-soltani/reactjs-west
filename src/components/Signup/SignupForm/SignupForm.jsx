@@ -64,13 +64,12 @@ const SignupForm = () => {
 
   useEffect(() => {
     if (isSuccess) {
-      console.log("data", data);
       setItemWithExpiry("emailCode", email);
       navigate("/verify-email");
     }
 
     if (isError) {
-      console.log("error", error);
+      // console.log("error", error);
       setEmailError({ isError: true, herlper: "Email already in use!" });
     }
   }, [data, isError, isSuccess]);

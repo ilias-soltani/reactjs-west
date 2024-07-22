@@ -73,7 +73,6 @@ const AddressDialog = ({ setOpen, open }) => {
         component: "form",
         onSubmit: (event) => {
           event.preventDefault();
-          console.log(selectedAddress);
           handleClose();
         },
       }}

@@ -41,7 +41,6 @@ const OrdersPage = () => {
       </div>
     );
   }
-  console.log(data?.data);
 
   return (
     <div className="profile-section">

@@ -50,12 +50,11 @@ const ResetPasswordForm = () => {
 
   useEffect(() => {
     if (isSuccess) {
-      console.log(data);
       localStorage.removeItem("isPasswordReset");
       navigate("/login", { replace: true });
     }
     if (isError) {
-      console.log(error);
+      // console.log(error);
       setPasswordError({
         isError: true,
         helper: "Something went wrong, please try again later",

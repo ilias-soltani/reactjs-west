@@ -58,9 +58,7 @@ const CartMenuItems = ({ data, handleExit }) => {
     }
   };
 
-  useEffect(() => {
-    if (appIsError) console.log(appError);
-  }, [appIsError, appError]);
+  // useEffect(() => {}, [appIsError, appError]);
   return (
     <div
       className="cart-menu-items"
