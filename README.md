@@ -1,16 +1,15 @@
-<div align='center'><img src='https://github.com/user-attachments/assets/b4976321-2f52-4bff-b657-d58d89ad1708'/></div>
+<div align='center' ><img src='https://github.com/user-attachments/assets/b4976321-2f52-4bff-b657-d58d89ad1708' width="300"/></div>
 
 <h2>About the project</h2>
 
-<p>This is a minimalist e-commerce website built with React and CSS. This
-website features a modern and intuitive design, with easy-to-use navigation and a
-simple shopping experience that puts the focus on the products.</p>
+<p>West is a dynamic clothing brand website I developed, utilizing React for the frontend and Node.js with MongoDB for the backend. The site features a variety of collections, allowing users to explore and shop with ease, integrated with Stripe, it ensures secure and efficient payment processing. This project highlights my expertise in creating responsive and user-friendly e-commerce platforms.</p>
 
-<p>Credits for the design goes to <a href='https://github.com/Abderraouf-Rahmani'>Abderraouf</a></p>
 
-👉 Live Demo: <a href='https://minimalist-e-commerce.vercel.app/'>Ecommerce Demo</a>
+👉 Live Demo: <a href='https://west-app-psi.vercel.app/'>West</a>
 
 <h3>Build with:</h3>
 
-» Vanilla CSS <br>
-» React JS
+» SCSS <br>
+» React JS <br>
+» Material UI <br>
+» Stripe
