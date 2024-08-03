@@ -12,4 +12,11 @@
 » SCSS <br>
 » React JS <br>
 » Material UI <br>
-» Stripe
+» Stripe <br>
+
+<h2>Screenshots of the Project 📸</h2>
+<br>
+
+
+
+<div align='center'><img src='https://github.com/user-attachments/assets/4b0fd6ce-eaf7-4867-9fe5-6228455b3a6e'/></div>
