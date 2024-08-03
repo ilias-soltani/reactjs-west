@@ -5,7 +5,7 @@
 <p>West is a dynamic clothing brand website I developed, utilizing React for the frontend and Node.js with MongoDB for the backend. The site features a variety of collections, allowing users to explore and shop with ease, integrated with Stripe, it ensures secure and efficient payment processing. This project highlights my expertise in creating responsive and user-friendly e-commerce platforms.</p>
 
 
-👉 Live Demo: <a href='https://west-app-psi.vercel.app/'>West</a>
+👉 Live Demo: <a href='https://west-app-psi.vercel.app/' target="_blank">West</a>
 
 <h3>Build with:</h3>
 
