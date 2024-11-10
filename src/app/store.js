@@ -9,18 +9,21 @@ import { authApi } from "./services/authApi";
 import { cartApi } from "./services/cartApi";
 import { orderApi } from "./services/orderApi";
 import { addressApi } from "./services/addressApi";
+import errorHandler from "../utils/errorHandler";
 
 export const store = configureStore({
   reducer: rootReducer,
   middleware: (getDefaultMiddleware) =>
-    getDefaultMiddleware().concat(
-      productApi.middleware,
-      collectionApi.middleware,
-      categoryApi.middleware,
-      colorApi.middleware,
-      authApi.middleware,
-      cartApi.middleware,
-      orderApi.middleware,
-      addressApi.middleware
-    ),
+    getDefaultMiddleware()
+      .concat(
+        productApi.middleware,
+        collectionApi.middleware,
+        categoryApi.middleware,
+        colorApi.middleware,
+        authApi.middleware,
+        cartApi.middleware,
+        orderApi.middleware,
+        addressApi.middleware
+      )
+      .concat(errorHandler), // Add error handler middleware at the end
 });
